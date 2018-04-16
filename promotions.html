@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Sizzling Bubble Gum</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://use.typekit.net/suw6oxf.css">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<script>
+	function validateForm() {
+		var code = document.getElementById('code').value;
+		var regex = RegExp('^[0-9]{3}$');
+		if (isNaN(code) || regex.test(code) == false) {
+			document.getElementById('err-msg').innerHTML = "Please Enter a 3 digit number.";
+		}	else if (code > 500) {
+			window.location="winner.html";
+		}	else {
+			window.location="loser.html";
+		}
+	}
+	</script>
+
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+<script src="js/hamburgler.js"></script>
+	<link rel="stylesheet" href="css/hamburgler.css">
+</head>
+	<body>
+<div class="wrapper">
+<header>
+  <a class="home-link" href="/wgd251"> <img class="logo-image" src="images/logo.png" alt="Sizzling Bubble Gum Logo">
+  <h1 class="logo-text">Sizzling <br> Bubble Gum</h1> </a>
+  <nav>
+		<!-- THIS IS THE MENU -->
+<div class="nav">
+	<ul>
+		<li class="first-link"><a href="beverage-pairings.html">Beverage Pairings</a></li>
+		<li><a href="promotions.html">Promotions</a></li>
+		<li><a href="about.html">About</a></li>
+		<li class="last-link"><a href="contact.html">Contact Us</a></li>
+	</ul>
+</div>
+<!-- THIS IS THE ICON -->
+<a href="javascript:void(0)" class="icon">
+	<div class="hamburger">
+		<div class="menui top-menu"></div>
+		<div class="menui mid-menu"></div>
+		<div class="menui bottom-menu"></div>
+	</div>
+</a>
+  </nav>
+</header>
+
+<main>
+	<div class="coupon-wrap clearfix">
+<img class="coupon" src="images/coupon.gif" alt="Coupon">
+<a href="images/coupon-pdf.pdf" target="_blank">Click to Print Coupon</a>
+</div>
+<div class="text-container">
+	<h2 class="text-center">Contest</h2>
+	<p>On the inside wrapper of each stick of gum, there will be a three-digit code. Enter this code to see if you are one of the lucky winners!</p>
+	<p>First Prize is a trip for 4 people for a trip to Orlando, where you can visit Disney World. Orlando provides unique entertainment and fabulous nightlife; the city is only a car ride away from Cocoa Beach and the Kennedy Space Station. Second prize is $1,000 cash which will be dispursed in the form of a check.</p>
+	<h2 class="text-center">Contest Rules</h2>
+	<p>You can only win a prize once. Must be 18 to win.</p>
+</div>
+<div class="text-container">
+<img src="images/prize1.png" alt="First Prize">
+<img src="images/prize2.png" alt="Second Prize">
+</div>
+<div class="text-container">
+	<p>Enter your 3 digit code here.</p>
+	<input id="code" type="text" />
+	<button class="button" onclick="return validateForm()">Submit To Win!</button>
+	<p id="err-msg"></p>
+</div>
+</main>
+    <footer>
+			<ul>
+				<li><img src="images/facebook.png" alt="Facebook logo">
+				</li>
+				<li><img src="images/instagram.png" alt="Instagram logo">
+				</li>
+				<li><img src="images/twitter.png" alt="Twitter logo">
+				</li>
+			</ul>
+      <small>Copyright &copy; 2018 by Kristen Studebaker.</small>
+    </footer>
+</div>
+	</body>
+</html>

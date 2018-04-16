@@ -1,0 +1,230 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Sizzling Bubble Gum</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://use.typekit.net/suw6oxf.css">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+<script src="js/hamburgler.js"></script>
+<script type="text/javascript">
+
+	$.fn.accessibleDropDown = function() {
+		var el = $(this);
+		$("a", el).focus(function() {
+			$(this).parents("li").addClass("hover");
+		}).blur(function() {
+			$(this).parents("li").removeClass("hover");
+		});
+	}
+	function validForm(){
+	var fname = document.form1.fname;
+	var email = document.form1.email;
+	var emailRegex = /^([A-Z0-9._%+-]+)\@([A-Z0-9.-]+)\.([A-Z]{2,4})$/i;
+	var comments = document.form1.comments;
+	var phone1 = document.form1.phone1;
+	var phone2 = document.form1.phone2;
+	var phone3 = document.form1.phone3;
+	var fnErr = document.getElementById('fnErr');
+	var lnErr = document.getElementById('lnErr');
+	var emErr = document.getElementById('emErr');
+	var phErr = document.getElementById('phErr');
+	var cmErr = document.getElementById('cmErr');
+
+	if(fname.value=="") {
+		fnErr.innerHTML = "We need your name, please.";
+		fname.focus();
+		return false;
+	} else {
+		fnErr.innerHTML = "";
+	}
+
+	if(email.value == "") {
+		emErr.innerHTML = "We need an email address, please.";
+		email.focus();
+		return false;
+	}
+	else if(!emailRegex.test(email.value)) {
+		email.focus();
+		emErr.innerHTML = "enter a valid email address, please.";
+		// email.focus();
+		return false;
+	} else {
+		emErr.innerHTML = "";
+	}
+
+	if(isNaN(phone1.value) || isNaN(phone2.value) || isNaN(phone3.value)) {
+		phErr.innerHTML = "If you include a phone number it should be numbers only.";
+		phone1.select();
+		return false;
+	} else {
+		phErr.innerHTML = "";
+	}
+
+	if(comments.value == "") {
+		cmErr.innerHTML = "Please include a comment or 'none' in the comment box.";
+		comments.focus();
+		return false;
+	} else {
+		cmErr.innerHTML = "";
+	}
+
+	// var interest = document.getElementById('interest');
+	// var inErr = document.getElementById('inErr');
+	// var si = interest.selectedIndex;
+	// var inValue = interest.options[si].text;
+	// if(inValue === "-- Please Select --") {
+	// 	inErr.innerHTML = "Please select your interests.";
+	// 	return false;
+	// } else {
+	// 	inErr.innerHTML = "";
+	// }
+	// var notices = document.form1.notices;
+	// var selected;
+	// for(var i=0;i<notices.length;i++) {
+	// 	if(notices[i].checked) {
+	// 		selected = notices[i].value;
+	// 	}
+	// }
+	//set up a message for a advert recipient
+	var msg = "Thank you, <b>"+fname.value
+	+"!</b> Your message has been received and one of our representatives will reply to <a href='"
+	+email.value+"'>"+email.value+"</a> within a day or two. Relax, and enjoy the rest of the site!";
+
+	document.getElementById('fnlMsg').innerHTML = "<strong>"+fname.value+"</strong>, thank you for your feedback!";
+
+	$('#contactForm').addClass('hide');
+	$('#contactHeading').addClass('hide');
+
+		//var contactForm = document.getElementById('contactForm').setAttribute('class','hide');
+	// 	var loseSep = document.getElementsByClassName('spec');
+	// 	loseSep[0].setAttribute('class', 'hide');
+	// } else {
+	// 	document.getElementById('notePref').innerHTML = "Please make a selection:";
+	// }
+}
+	</script>
+	<link rel="stylesheet" href="css/hamburgler.css">
+</head>
+	<body>
+<div class="wrapper">
+<header>
+  <a class="home-link" href="/wgd251"> <img class="logo-image" src="images/logo.png" alt="Sizzling Bubble Gum Logo">
+  <h1 class="logo-text">Sizzling <br> Bubble Gum</h1> </a>
+  <nav>
+		<!-- THIS IS THE MENU -->
+<div class="nav">
+	<ul>
+		<li class="first-link"><a href="beverage-pairings.html">Beverage Pairings</a></li>
+		<li><a href="promotions.html">Promotions</a></li>
+		<li><a href="about.html">About</a></li>
+		<li class="last-link"><a href="contact.html">Contact Us</a></li>
+	</ul>
+</div>
+<!-- THIS IS THE ICON -->
+<a href="javascript:void(0)" class="icon">
+	<div class="hamburger">
+		<div class="menui top-menu"></div>
+		<div class="menui mid-menu"></div>
+		<div class="menui bottom-menu"></div>
+	</div>
+</a>
+  </nav>
+</header>
+
+<main class="main-contact">
+     <h2 id="contactHeading" class="h3">Contact</h2>
+     <p id="fnlMsg">We welcome your comments and would love the opportunity to help you!</p>
+		 <p>To claim your prize, please call our CEO and Founder Kristen Studebaker at (123) 456-7890 option 1 with the 3-digit winning number on your gum wrapper.</p>
+		 <p>To submit new Sizzling Bubble Gum flavor ideas, please contact our Research & Design team at (123) 456-7890 option 2.</p>
+		 <p>For ideas on how to blow the biggest bubbles with your Sizzling Bubble Gum, please contact our Bubble Experts at (123) 456-7890 option 3.</p>
+		 <p>For general comments or questions, please fill out the contact form below, and a representative will contact you soon.</p>
+<div id="contactForm">
+  <h2 class="h3">Contact Form</h2>
+  <p class="lead">Please fill in the information below:</p>
+  <form id="gform" method="post" action="https://script.google.com/macros/u/1/s/AKfycbzH1AKpzty_Hj_NhfHhGITcNsMkW0dRn-Ne69Jg8g3Us-kyx2A/exec" name="form1">
+    <p class="input-wrapper">First Name: <br>
+    <input type="text" id="fname" name="fname" placeholder="first name">
+    <br>
+    <span class="err" id="fnErr"></span>
+    </p>
+  <p class="input-wrapper">Last Name:
+    <br>
+    <input type="text" id="lname" name="lname" placeholder="last name">
+    <br>
+    <span class="err" id="lnErr">
+    </span>
+  </p>
+  <p class="input-wrapper">Email:
+  <br>
+  <input type="text" id="email" name="email" placeholder="you@youremail.com">
+  <br>
+  <span class="err" id="emErr">
+  </span>
+  </p>
+  <p class="input-wrapper">Phone:
+  <br>
+  <input class="phone" type="tel" id="phone1" name="phone1" placeholder="XXX" maxlength="3">
+  <input  class="phone" type="tel" id="phone2" name="phone2" placeholder="XXX" maxlength="3" class="shortmargin">
+  <input class="phone" type="tel" id="phone3" name="phone3" placeholder="XXXX" maxlength="4" class="shortmargin">
+  <br>
+  <span class="err" id="phErr">
+  </span>
+  </p>
+  <p class="input-wrapper">Comments:
+  <br>
+  <textarea id="comments" name="comments" placeholder="add your comments" class="adj">
+  </textarea>
+  <br>
+  <span class="err" id="cmErr">
+  </span>
+  </p>
+  <!-- <p class="input-wrapper">Please tell us about your preferences:
+  </p>
+<p class="input-wrapper">I am interested in:
+  <br>
+  <span id="inErr" class="err">
+  </span>
+  <select id="interest" name="interest" class="adj">
+    <option>-- Please Select --</option>
+    <option>Purchasing Stationery</option>
+    <option>Learning about bulk discounts</option>
+    <option>Craft parties</option>
+  </select>
+</p>
+<p class="input-wrapper">Would you like to receive notifications via email?
+  <br>
+  <span class="err" id="notePref"></span>
+  <input type="radio" id="notices--yes" name="notices" value="yes">: Yes!
+  <input type="radio" id="notices--maybe" name="notices" value="maybe">: Not Yet.
+  <input type="radio" id="notices--no-thank-you" name="notices" value="no">:No Thanks.
+</p> -->
+<p class="input-wrapper"><input type="button" class="button" value="Send Information" onclick="validForm()">
+</p>
+  </form>
+</div>
+<p>Mailing address: 123 Main St., Hudson OH 44236</p>
+</main>
+    <footer>
+			<ul>
+				<li><img src="images/facebook.png" alt="Facebook logo">
+				</li>
+				<li><img src="images/instagram.png" alt="Instagram logo">
+				</li>
+				<li><img src="images/twitter.png" alt="Twitter logo">
+				</li>
+			</ul>
+      <small>Copyright &copy; 2018 by Kristen Studebaker.</small>
+    </footer>
+</div>
+<script src="js/formhandler.js"></script>
+	</body>
+</html>

@@ -1,0 +1,334 @@
+/*typography*/
+html {font-size: 1.375em;}
+
+body {
+  background-color: white;
+  font-family: "Myriad Pro", sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+}
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1, .h1 {
+  text-align:center;
+  margin-top: 0;
+  font-size: 3.998em;
+}
+
+h2, .h2 {font-size: 2.827em;}
+.margin-remove-top {
+  margin-top: 0;
+}
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 1.65em;
+  }
+}
+
+h3, .h3 {font-size: 1.999em;}
+
+h4, .h4 {font-size: 1.414em;}
+
+small, .font_small {font-size: 0.707em;}
+
+
+/*layout*/
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  background: #f3b9b9;
+}
+.wrapper {
+  background: #fff;
+}
+main {
+  margin: 0 12px 0 12px;
+}
+footer {
+  margin: 0 12px 0 12px;
+}
+@media screen and (min-width: 481px) and (max-width: 960px) {
+header {
+  margin: 0 auto;
+  max-width: 960px;
+}
+}
+@media screen and (min-width: 960px) {
+  .wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    border: 2px #B6B3B7 solid;
+  }
+}
+/* header */
+.home-link {
+  text-decoration: none;
+}
+header {
+  border-bottom: 2px #B6B3B7 solid;
+  overflow-y: hidden;
+  background: #E35B5D;
+}
+
+nav {
+  border-top: 2px #B6B3B7 solid;
+}
+.nav ul {
+  padding-left: 0;
+}
+@media screen and (min-width:481px) {
+  .icon {
+    display: none;
+  }
+}
+
+
+.logo-image {
+  width: 100px;
+  margin-right: .75em;
+  float: left;
+}
+.logo-text {
+  font-size: 1.2em;
+  font-family: "Pacifico", cursive;
+  position: relative;
+  top: 10px;
+  line-height: 1.40em;
+  color: #fdb6ce;
+  text-shadow:
+		-1px -1px 0 #fff,
+		1px -1px 0 #fff,
+		-1px 1px 0 #fff,
+		1px 1px 0 #fff;
+}
+
+@media screen and (min-width: 481px) and (max-width: 960px) {
+  .logo-image{
+    width: 200px;
+    margin-right: 2.2em;
+  }
+  .logo-text {
+    font-size: 1.7em;
+    margin-right: 0.5em;
+  }
+header {
+  clear: left;
+}
+}
+@media screen and (min-width: 960px) {
+  .logo-image{
+    width: 350px;
+    margin-right: 2.2em;
+  }
+  .logo-text {
+    font-size: 3em;
+    margin-right: 0.5em;
+    position: relative;
+    top: 65px;
+  }
+header {
+  clear: left;
+}
+}
+
+@media screen and (min-width: 481px) {
+  .nav ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+  }
+
+  .nav ul > li {
+    float: left;
+    height: 60px;
+    text-align: center;
+    width: calc(100% / 4);
+    position: relative;
+    border-right: 2px #B6B3B7 solid;
+  }
+
+  .nav ul .first-link {
+    border-left: 2px #B6B3B7 solid;
+  }
+
+  .nav ul li a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+  }
+}
+
+nav {
+  clear: left;
+}
+.nav ul li {
+  background: #FFA446;
+}
+.nav a {
+  color: #fff;
+}
+
+@media screen and (min-width: 960px) {
+  .nav ul .first-link {
+    border-left: 0;
+  }
+  .nav ul .last-link {
+    border-right: 0;
+  }
+}
+
+/*main*/
+.button {
+  background-color: #FFA446;
+}
+
+.coupon-wrap {
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.coupon-wrap a {
+  float: right;
+}
+
+@media screen and (max-width: 480px) {
+.h3 {
+  margin-top: .3em;
+  font-size: 1.25em;
+}
+p {
+  margin-bottom: 0;
+}
+.coupon {
+  max-width: 85%;
+  margin-top: 1.2em;
+}
+}
+
+@media screen and (min-width: 200px) and (max-width: 959px) {
+  .text-container img {
+    margin: 1.2em auto;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 960px) {
+  main{
+    margin-top: 2.15em;
+  }
+}
+@media screen and (min-width: 960px) {
+  main img {
+    float: left;
+    clear: left;
+    margin-right: 1.75em;
+  }
+  .text-container img {
+    clear: none;
+  }
+  .coupon {
+    float: none;
+    clear: none;
+    margin: 2em auto 0;
+    max-width: 660px;
+  }
+  .text-container {
+   margin: 0 auto;
+   max-width: 660px;
+   overflow: auto;
+  }
+  .main-contact {
+    margin-left: 6em;
+  }
+  input, textarea, button {
+    height: 50px;
+    font-size: 1.2em;
+    font-family: "Myriad Pro", sans-serif;
+  }
+  .phone {
+    width: 80px;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .headshot {
+    height: 300px;
+    position: relative;
+    margin: 0 32%;
+  }
+}
+
+/*images*/
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/*footer*/
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer ul li {
+  float: left;
+  width: calc(100% / 3);
+  text-align: center;
+}
+
+footer ul li:last-child {
+  padding-right: 0;
+}
+
+small {
+  display: block;
+  clear: left;
+  text-align: center;
+}
+
+/* @media screen and (min-width: 481px) and (max-width: 960px) {
+} */
+
+@media screen and (min-width: 481px) {
+  footer ul > li {
+    float: right;
+    width: auto;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+  small {
+    clear: right;
+    margin-top: 2em;
+  }
+}
+/*helpers*/
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+.hide {
+  display: none;
+}
+.text-center {
+  text-align: center;
+}
+
+
+/* links */
+a:hover {
+  color: black;
+}
